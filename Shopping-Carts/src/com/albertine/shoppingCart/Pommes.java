@@ -12,5 +12,21 @@ package com.albertine.shoppingCart;
  */
 public class Pommes extends Article
 {
-    
+     public Pommes(int prix) 
+    {
+        super(prix);
+    }
+     
+     public int getQuantiteNet(int qteCourant)
+    {
+        int quantite_A_Payer;
+        if(qteCourant%2 == 0)
+            quantite_A_Payer = qteCourant/2; 
+        else
+        {
+            quantite_A_Payer = (qteCourant/2)+1;
+        }
+        return quantite_A_Payer;
+            
+    }
 }

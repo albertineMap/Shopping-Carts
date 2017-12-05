@@ -29,14 +29,8 @@ public class Test
         System.out.println("\n"
                 + "");
         
-         System.out.println("******Test pour les articcles******");
-         Article a = new Article();
          
-         String liste = "Pommes,Oranges,Orange,Pommes";
-         
-        DecimalFormat df = new DecimalFormat("####0.00");
-         double montant = a.getCoutTotal(liste);
-         System.out.println("\nMontant total des achats est: "+df.format(montant)+"$");
+         //System.out.println("\nMontant total des achats est: "+df.format(montant)+"$");
     }
     
 }

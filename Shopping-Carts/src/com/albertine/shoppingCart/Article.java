@@ -11,18 +11,18 @@ package com.albertine.shoppingCart;
  *
  * @author albertine
  */
-public class Article {
-    public String nom;
+public abstract class Article {
     public double prix;
 
-    public String getNom() {
-        return nom;
+    public Article() {
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    
+    public Article(double prix) {
+        this.prix = prix;
     }
 
+   
     public double getPrix() {
         return prix;
     }
@@ -31,6 +31,7 @@ public class Article {
         this.prix = prix;
     }
     
+     public abstract int getQuantiteNet(int qteCourant);
     
     public double getCoutTotal(String liste)
     {
