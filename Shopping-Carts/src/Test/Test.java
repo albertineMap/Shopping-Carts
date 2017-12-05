@@ -7,6 +7,7 @@ package Test;
 
 import com.albertine.nombreSuperieur.NombreSup;
 import com.albertine.shoppingCart.Article;
+import com.albertine.shoppingCart.Caisse;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
@@ -26,11 +27,13 @@ public class Test
         int soe = nbSup.getLeNbreSup(nombreLu);
         
         System.out.println("ce nombre est: "+soe);
-        System.out.println("\n"
-                + "");
-        
-         
-         //System.out.println("\nMontant total des achats est: "+df.format(montant)+"$");
+        System.out.println("\n************* Simulation caisse ************* ");
+         String liste = "Pommes,Oranges,Oranges,Pommes,Pommes,Oranges,Oranges";
+         Caisse caisse = new Caisse(liste);
+            caisse.getquantite(liste);
+            
+         DecimalFormat df = new DecimalFormat("####0.00");
+        System.out.println("\nMontant total des achats est: "+df.format(caisse.getMontantTotal())+"$");
     }
     
 }

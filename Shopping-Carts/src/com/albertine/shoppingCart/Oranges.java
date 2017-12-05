@@ -13,22 +13,17 @@ package com.albertine.shoppingCart;
 public class Oranges extends Article
 {
 
-    public Oranges(int prix) 
+    public Oranges() 
     {
-        super(prix);
     }
     
-    public int getQuantiteNet(int qteCourant)
+    public static  int getQuantiteNet(int qteCourant)
     {
-        int rest =0,quantite_A_Payer;
-        int facteur = qteCourant/3; //nous donne le nombre d'orange gratuit
-        if(qteCourant%3 == 0)
-            quantite_A_Payer = qteCourant-facteur; //nombre initial - le nombre gratuit
-        else
-        {
-            rest = qteCourant-(qteCourant-Math.round(facteur));
-            quantite_A_Payer = qteCourant-facteur+rest;
-        }
+        int quantite_A_Payer;
+        int facteur = qteCourant%3; //nous donne le nombre d'orange gratuit
+        
+            quantite_A_Payer = qteCourant-facteur;
+        
         return quantite_A_Payer;
             
     }

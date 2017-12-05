@@ -6,23 +6,10 @@
 package com.albertine.shoppingCart;
 
 
+public class Article 
+{
+    protected double prix;
 
-/**
- *
- * @author albertine
- */
-public abstract class Article {
-    public double prix;
-
-    public Article() {
-    }
-
-    
-    public Article(double prix) {
-        this.prix = prix;
-    }
-
-   
     public double getPrix() {
         return prix;
     }
@@ -31,22 +18,5 @@ public abstract class Article {
         this.prix = prix;
     }
     
-     public abstract int getQuantiteNet(int qteCourant);
-    
-    public double getCoutTotal(String liste)
-    {
-        String [] commande = liste.split(",");
-        double prixHorsTaxe=0.0,prixToutTaxe=0.0;
-        for(int i=0;i<commande.length;i++)
-        {
-            if(commande[i].trim().equalsIgnoreCase("Pommes"))
-                prixHorsTaxe+=0.60;
-            else
-                prixHorsTaxe+=1.25;
-                
-        }
-        prixToutTaxe+= Taxes.getMontantTTC(prixHorsTaxe);
-        return prixToutTaxe;
-    }
     
 }
