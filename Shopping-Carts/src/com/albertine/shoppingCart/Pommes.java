@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.albertine.shop;
+package com.albertine.shoppingCart;
 
-import com.albertine.shoppingCart.Article;
 
 /**
  *
@@ -13,6 +12,5 @@ import com.albertine.shoppingCart.Article;
  */
 public class Pommes extends Article
 {
-    final double PRIXUNIT = 0.60;
     
 }
